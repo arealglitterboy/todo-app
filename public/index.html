@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo - Ben Brown</title>
+
+    <link rel="shortcut icon" href="images/favicon-2.svg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app">
+        <header class="header">
+            <div class="header__name">
+                <h1><a href="./">ToDo</a></h1>
+                <h2>By <span class="header__name__me">Ben Brown</span></h2>
+            </div>
+            <nav class="header__nav">
+                <button class="header__nav__open" id="header__nav__open"><img src="images/menu.svg" alt="hamburger menu icon"></button>
+                <ul class="header__nav__list" id="header__nav__list">
+                    <li class="header__nav__list__item"><a href="">Portfolio</a></li>
+                    <li class="header__nav__list__item"><a href="">About Me</a></li>
+                    <li class="header__nav__list__item"><a href="">Other Projects</a></li>
+                    <li class="header__nav__list__item"><a href="">Navigation</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="body">
+            <header class="search">
+                <label class="search__label" for="search">Search:</label>
+                <input class="search__input" type="text" id="search" placeholder="What are you looking for?">
+            </header>
+            
+            
+            <section class="todos">
+                <form action="" id="add-todo" class="todo">
+                    <input tabindex="2" type="checkbox" name="checkbox" class="todo__check" id="add-todo__checked">
+                    <div tabindex="1" id="add-note__title" name="title" class="todo__title todo__title--input" data-placeholder="What do you need to do?" contenteditable=""></div>
+                    <button tabindex="3" class="todo__action" name="button" id="add-note__button">+</button>
+                </form>
+                <ul id="active-todos" class="todos__list"></ul>
+            </section>
+
+            <section class="todos">
+                <h3 class="todos__header">Complete</h3>
+                <ul id="inactive-todos" class="todos__list" data-placeholder="Complete some tasks"></ul>
+            </section>
+        </main>
+    </div>
+
+
+    <template id="todo-template">
+        <li class="todo">
+            <input type="checkbox" class="todo__check">
+            <p class="todo__title"></p>
+            <button class="todo__action">–</button>
+        </li>
+    </template>
+
+    <script src="/scripts/bundle.js"></script>
+</body>
+</html>
